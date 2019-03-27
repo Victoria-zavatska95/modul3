@@ -1,0 +1,19 @@
+<div id="show_contact"></div>
+<div id="show_room1"></div>
+<div id="show_room2"></div>
+<div id="show_room3"></div>
+<%= link_to "RoomWith1", room1_path, :remote => true %>
+<%= link_to "RoomWith2", room2_path, :remote => true %>
+<%= link_to "RoomWith3", room3_path, :remote => true %>
+<div class="row">
+  <div class="col-sm-12">
+      Title: <%= @hotel.name %><br />
+      Description: <%= @hotel.description %><br />
+      <% @hotel.images.each do |image| %>
+      <p>
+        <%= image_tag(image.url, size: "200x200", class: "img-thumbnail")%>
+      </p>
+    <% end %>
+  </div>
+</div>
+

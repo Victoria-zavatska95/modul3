@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <%= link_to "Hotel Home Page", root_path, class: "navbar-brand" %>
+   
+    <ul class="navbar-nav ml-auto">
+      <%= link_to root_path, class: "nav-link" do %>
+        <i class="far fa-images"></i> Gallery
+      <% end %>
+        <%= link_to contact_path, remote: true, class: "nav-link" do %>
+          <i class="fas fa-user"></i> Our Contacts
+        <% end %>
+    </ul>
+</nav>
